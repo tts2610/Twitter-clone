@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-}
-
 
 /* Create three equal columns that floats next to each other */
 
@@ -66,17 +62,8 @@ tr {
     cursor: pointer;
 }
 
-#trendings .trends-header {
-    font-weight: 800;
-    font-size: larger;
-}
-
 #trendings .content:hover {
-    filter: brightness(97%)
-}
-
-#trendings ul li .hashtag {
-    font-weight: 700;
+    filter: brightness(96%)
 }
 
 #moreToFollowImg {
@@ -118,14 +105,6 @@ tr {
     background-color: #f5f8fa;
 }
 
-#whoToFollow .content {
-    cursor: pointer;
-}
-
-#whoToFollow .content:hover {
-    filter: brightness(97%)
-}
-
 #whoToFollow .row .col-6 {
     display: flex;
     flex-direction: column;
@@ -142,13 +121,4 @@ tr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#whoToFollow .whoToFollow-header {
-    font-weight: 800;
-    font-size: larger;
-}
-
-h6 {
-    font-weight: 700;
 }

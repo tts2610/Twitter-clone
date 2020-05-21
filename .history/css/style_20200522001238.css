@@ -75,7 +75,7 @@ tr {
     filter: brightness(97%)
 }
 
-#trendings ul li .hashtag {
+#trendings .row .col-6 .hashtag {
     font-weight: 700;
 }
 

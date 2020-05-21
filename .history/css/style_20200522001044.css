@@ -75,10 +75,6 @@ tr {
     filter: brightness(97%)
 }
 
-#trendings ul li .hashtag {
-    font-weight: 700;
-}
-
 #moreToFollowImg {
     border-radius: 50%;
     width: 50px;

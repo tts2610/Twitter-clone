@@ -67,16 +67,11 @@ tr {
 }
 
 #trendings .trends-header {
-    font-weight: 800;
-    font-size: larger;
+    font-weight: 500;
 }
 
 #trendings .content:hover {
     filter: brightness(97%)
-}
-
-#trendings ul li .hashtag {
-    font-weight: 700;
 }
 
 #moreToFollowImg {
@@ -142,13 +137,4 @@ tr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#whoToFollow .whoToFollow-header {
-    font-weight: 800;
-    font-size: larger;
-}
-
-h6 {
-    font-weight: 700;
 }
