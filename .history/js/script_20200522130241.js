@@ -73,6 +73,7 @@ const post = () => {
 
     contentArea.appendChild(reTweetA);
 
+    num++;
 }
 
 tweetArea.addEventListener("input", countLetter);
@@ -81,7 +82,7 @@ tweetArea.addEventListener("input", countLetter);
 function retweet(id) {
     let original = tweetList.find(x => x.id == id);
     let child = {
-        id: tweetList.length,
+        id: ++(tweetList.length - 1),
         name: "testChild",
         logo: "mylogo.png",
         content: original.content,

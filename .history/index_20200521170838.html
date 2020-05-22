@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" />
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="column1" style="background-color:#aaa;">
+            <h2>NavBar Left</h2>
+            <p>Home</p>
+            <p>#Explore</p>
+            <p>Notifications</p>
+            <p>Message</p>
+            <p>Bookmarks</p>
+            <p>List</p>
+
+        </div>
+        <div class="column2" style="background-color:#bbb;">
+            <h2>Column 2</h2>
+            <input type="text" id="tweetArea" placeholder="What's happening">
+            <button id="tweetBtn" onclick="post()">Tweet</button>
+            <div id="remain"></div>
+            <div id="content"></div>
+        </div>
+        <div class="column3" style="background-color:#ccc;">
+
+            <div id="trendings" class="px-3">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h5 class="my-0">Trends for you</h5>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <small class="text-muted">Trendings in Vietnam</small>
+                            <h6 class="my-0">Hanoi</h6>
+                            <small class="text-muted">4,661 Tweets</small>
+                        </div>
+                        <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <small class="text-muted">kpop . Treding</small>
+                            <h6 class="my-0">Jimin Treding</h6>
+                            <small class="text-muted">3,266 Tweets</small>
+                        </div>
+                        <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <small class="text-muted">Trendings in Vietnam</small>
+                            <h6 class="my-0">Hanoi</h6>
+                            <small class="text-muted">4,661 Tweets</small>
+                        </div>
+                        <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <small class="text-muted">kpop . Treding</small>
+                            <h6 class="my-0">Jimin Treding</h6>
+                            <small class="text-muted">3,266 Tweets</small>
+                        </div>
+                        <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

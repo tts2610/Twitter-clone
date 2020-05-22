@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-}
-
 
 /* Create three equal columns that floats next to each other */
 
@@ -64,19 +60,12 @@ tr {
 
 #trendings .content {
     cursor: pointer;
-}
-
-#trendings .trends-header {
-    font-weight: 800;
-    font-size: larger;
+    -webkit-filter: grayscale(50%);
 }
 
 #trendings .content:hover {
-    filter: brightness(97%)
-}
-
-#trendings ul li .hashtag {
-    font-weight: 700;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
 }
 
 #moreToFollowImg {
@@ -118,14 +107,6 @@ tr {
     background-color: #f5f8fa;
 }
 
-#whoToFollow .content {
-    cursor: pointer;
-}
-
-#whoToFollow .content:hover {
-    filter: brightness(97%)
-}
-
 #whoToFollow .row .col-6 {
     display: flex;
     flex-direction: column;
@@ -142,58 +123,4 @@ tr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#whoToFollow .whoToFollow-header {
-    font-weight: 800;
-    font-size: larger;
-}
-
-h6 {
-    font-weight: 700;
-}
-
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.main {
-    margin-left: 160px;
-    /* Same as the width of the sidenav */
-    font-size: 28px;
-    /* Increased text to enable scrolling */
-    padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
 }

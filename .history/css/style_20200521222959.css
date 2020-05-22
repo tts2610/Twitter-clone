@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Create three equal columns that floats next to each other */
+
+.column1 {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: 500px;
+}
+
+.column2 {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    height: 500px;
+}
+
+.column3 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 500px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+tr {
+    text-align: center;
+}
+
+#tweetArea {
+    width: 300px;
+    height: 100px
+}
+
+#tweetBtn {
+    margin-top: 10px;
+    width: 300px;
+}
+
+#trendings .list-group-item {
+    background-color: #f5f8fa;
+}
+
+#moreToFollowImg {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.fa-badge-check {
+    color: rgba(29, 161, 242, 1.00);
+}
+
+.followBtn {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 25px;
+    color: #1DA1F2;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 3px;
+    background-color: #FFFFFF;
+    border: solid #1DA1F2 1px;
+    text-decoration: none;
+    /* display: inline-block; */
+    cursor: pointer;
+    text-align: center;
+}
+
+.followBtn:hover {
+    color: #1DA1F2;
+    background: #CFE7F6;
+    border: solid #CFE7F6 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+#whoToFollow .row .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#whoToFollow .row .col-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

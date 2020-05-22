@@ -73,6 +73,7 @@ const post = () => {
 
     contentArea.appendChild(reTweetA);
 
+    num++;
 }
 
 tweetArea.addEventListener("input", countLetter);
