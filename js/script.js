@@ -45,7 +45,9 @@ tweetArea.addEventListener("input", countLetter);
 
 
 
-
+// function delete here
+//   name: "Hugo",
+//   logo: "mylogo.png",
 
 
 // var aPost = {
