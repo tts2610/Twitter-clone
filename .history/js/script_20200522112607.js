@@ -2,13 +2,10 @@ let tweetArea = document.getElementById("tweetArea");
 let contentArea = document.getElementById("content");
 const MAX_LETTER = 140;
 
-let tweetList = [];
-
-
-
 
 const countLetter = () => {
     let lengthOfSentence = tweetArea.value.length;
+    console.log("length is ", lengthOfSentence);
 
     let remain = MAX_LETTER - lengthOfSentence;
 
@@ -27,27 +24,8 @@ const countLetter = () => {
 }
 
 const post = () => {
-
-    let myTweet = {
-        id: tweetList.length ? tweetList.length : 0,
-        name: "Hugo",
-        logo: "mylogo.png",
-        content: "",
-        time: "8mins",
-        retweet: "6",
-        likes: "20",
-        comments: "10",
-        isTweet: false,
-        parent: null,
-        hastags: ["#teamMember", "#French"]
-    };
-
     // get value of input text
     let input = tweetArea.value;
-    myTweet.content = input;
-
-    tweetList.push(myTweet);
-
     // create new div
     let div = document.createElement("div");
 
@@ -57,46 +35,28 @@ const post = () => {
     // append that value to div
     div.appendChild(text);
 
-    let reTweetA = document.createElement("a");
-    reTweetA.href = "#";
-    reTweetA.setAttribute("onclick", `retweet(${myTweet.id})`);
+    let a = document.createElement("a");
+    a.href = retweet();
+    // a.onclick = retweet();
 
     // <a></a>
     let aText = document.createTextNode("Retweet");
 
-    reTweetA.appendChild(aText);
+    a.appendChild(aText);
 
     // <div>input</div>
 
     // append that div to the content Area
     contentArea.appendChild(div);
 
-    contentArea.appendChild(reTweetA);
-
+    contentArea.appendChild(a);
 }
 
 tweetArea.addEventListener("input", countLetter);
 
 
-function retweet(id) {
-    let original = tweetList.find(x => x.id == id);
-    let child = {
-        id: tweetList.length,
-        name: "testChild",
-        logo: "mylogo.png",
-        content: original.content,
-        time: "8mins",
-        retweet: "6",
-        likes: "20",
-        comments: "10",
-        isTweet: true,
-        parent: original.id,
-        hastags: ["#teamMember", "#French"]
-    }
-
-    tweetList.push(child);
-
-    console.log(tweetList);
+function retweet() {
+    alert("testing");
 }
 
 

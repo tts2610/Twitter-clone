@@ -4,6 +4,8 @@ const MAX_LETTER = 140;
 
 let tweetList = [];
 
+let num = 0;
+
 
 
 
@@ -29,7 +31,7 @@ const countLetter = () => {
 const post = () => {
 
     let myTweet = {
-        id: tweetList.length ? tweetList.length : 0,
+        id: num,
         name: "Hugo",
         logo: "mylogo.png",
         content: "",
@@ -73,6 +75,7 @@ const post = () => {
 
     contentArea.appendChild(reTweetA);
 
+    num++;
 }
 
 tweetArea.addEventListener("input", countLetter);
@@ -80,8 +83,9 @@ tweetArea.addEventListener("input", countLetter);
 
 function retweet(id) {
     let original = tweetList.find(x => x.id == id);
+    console.log(tweetList[tweetList.length - 1].id);
     let child = {
-        id: tweetList.length,
+        id: tweetList.pop().id,
         name: "testChild",
         logo: "mylogo.png",
         content: original.content,
@@ -96,7 +100,7 @@ function retweet(id) {
 
     tweetList.push(child);
 
-    console.log(tweetList);
+
 }
 
 
