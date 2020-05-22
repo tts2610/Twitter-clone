@@ -60,7 +60,6 @@ function deleteAll(id) {
 }
 
 function renderFromList() {
-    tweetList.sort((a, b) => b.id - a.id);
     let html = tweetList.map(element => {
         return `<div class="row">
         <div class="col-2">
@@ -79,7 +78,7 @@ function renderFromList() {
             <div>
                 link
             </div>
-            <div class="functionBar">
+            <div>
                 <i class="fal fa-comment"></i>
                 <i class="far fa-retweet" onclick="retweet(${element.id})" style="cursor:pointer;"></i>
                 <i class="fal fa-heart"></i>

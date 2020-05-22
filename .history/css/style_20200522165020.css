@@ -6,14 +6,9 @@ body {
     font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
-
-/* .container {
-    width: 90%;
-} */
-
 .sidenav {
     height: 100%;
-    width: 280px;
+    width: 334px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -21,7 +16,6 @@ body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     padding-top: 20px;
-    border-right: 1px solid lightgrey;
 }
 
 .sidenav a {
@@ -56,34 +50,13 @@ body {
 }
 
 .navlinks {
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .navlinks a {
     margin-bottom: 32px;
     margin-left: 20px;
     font-size: 16px;
-}
-
-.navlinks a:hover {
-    text-decoration: none;
-}
-
-.tweetbtn {
-    height: 50px;
-    width: 200px;
-    border-radius: 40px;
-    background-color: rgb(29, 161, 242);
-    color: white;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 0px;
-    margin-top: 10px;
-}
-
-.tweetbtn:hover {
-    background-color: rgba(26, 145, 218);
 }
 
 .home {
@@ -139,7 +112,6 @@ tr {
 #tweetBtn {
     margin-top: 10px;
     width: 300px;
-    margin-left: -18px
 }
 
 
@@ -245,13 +217,4 @@ h6 {
 #content .functionBar {
     display: flex;
     justify-content: space-between;
-}
-
-#content .row {
-    padding: 30px;
-    border: 1px solid lightgrey;
-}
-
-#content .row div {
-    margin-top: 4px;
 }

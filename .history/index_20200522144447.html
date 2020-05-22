@@ -26,78 +26,51 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <div class="sidenav">
-                    <div class="navlinks">
-                        <img src="/img/twt-logo1.png" alt="twitter-logo">
-                        <div class="home">
-                            <i class="fas fa-home fa-2x"></i>
-                            <a href="#Home">Home</a>
-                        </div>
+        <div>
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-                        <div class="explore">
-
-                            <i class="fas fa-hashtag fa-2x"></i>
-                            <a href="#services">Explore</a>
-
-                        </div>
-
-                        <div class="notifications">
-                            <i class="far fa-bell fa-2x"></i>
-
-                            <a href="#clients">Notifications</a>
-
-                        </div>
-
-                        <div class="messages">
-                            <i class="far fa-envelope fa-2x"></i>
-                            <a href="#contact">Messages</a>
-
-                        </div>
-
-                        <div class="bookmarks">
-                            <i class="far fa-bookmark fa-2x"></i>
-                            <a href="#clients">Bookmarks</a>
-
-                        </div>
-
-                        <div class="lists">
-                            <i class="far fa-list-alt fa-2x"></i>
-                            <a href="#contact">Lists</a>
-
-                        </div>
-
-
-                        <div class="profile">
-                            <i class="far fa-user fa-2x"></i>
-                            <a href="#clients">Profile</a>
-
-                        </div>
-
-                        <div class="more">
-                            <i class="far fa-comment-dots fa-2x"></i>
-                            <a href="#contact">More</a>
-
-                        </div>
-
-                        <button class="tweetbtn" href="#">Tweet</button>
-
-
-                    </div>
-
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-            </div>
-            <div class="col-5">
-                <h2>Main Section</h2>
+            </nav>
+            <div class="column2" style="background-color:#bbb;">
+                <h2>Column 2</h2>
                 <input type="text" id="tweetArea" placeholder="What's happening">
                 <button id="tweetBtn" onclick="post()">Tweet</button>
-                <span id="remain"></span>
-                <div id="content" class="mt-5">
-
+                <div id="remain"></div>
+                <div id="content">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
+                        </div>
+                        <div class="col-11">
+                            <div>
+                                <span>Title</span>
+                                <span>Tick</span>
+                                <span>Hashtag</span>
+                                <span>3min</span>
+                            </div>
+                            <div>
+                                description
+                            </div>
+                            <div>
+                                link
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-4">
+
+            <div class="column3" style="background-color:#ccc;">
 
                 <div id="trendings" class="px-3">
                     <ul class="list-group mb-3">
@@ -218,38 +191,17 @@
                         </li>
                     </ul>
                 </div>
+
+
+
             </div>
         </div>
-
-        <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav> -->
-        <!-- <div class="column2">
-
-        </div>
-
-        <div class="column3">
-
-        </div> -->
 
 
         <!-- END COL-3 -->
     </div>
 
     <script src="js/script.js"></script>
-    <script src="js/moment.js"></script>
 </body>
 
 </html>

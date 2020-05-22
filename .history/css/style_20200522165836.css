@@ -13,7 +13,7 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 280px;
+    /* width: 334px; */
     position: fixed;
     z-index: 1;
     top: 0;
@@ -56,17 +56,13 @@ body {
 }
 
 .navlinks {
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .navlinks a {
     margin-bottom: 32px;
     margin-left: 20px;
     font-size: 16px;
-}
-
-.navlinks a:hover {
-    text-decoration: none;
 }
 
 .tweetbtn {
@@ -139,7 +135,6 @@ tr {
 #tweetBtn {
     margin-top: 10px;
     width: 300px;
-    margin-left: -18px
 }
 
 
@@ -245,13 +240,4 @@ h6 {
 #content .functionBar {
     display: flex;
     justify-content: space-between;
-}
-
-#content .row {
-    padding: 30px;
-    border: 1px solid lightgrey;
-}
-
-#content .row div {
-    margin-top: 4px;
 }

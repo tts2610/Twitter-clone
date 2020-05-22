@@ -6,14 +6,9 @@ body {
     font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
-
-/* .container {
-    width: 90%;
-} */
-
 .sidenav {
     height: 100%;
-    width: 280px;
+    width: 334px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -21,7 +16,6 @@ body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     padding-top: 20px;
-    border-right: 1px solid lightgrey;
 }
 
 .sidenav a {
@@ -56,7 +50,7 @@ body {
 }
 
 .navlinks {
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .navlinks a {
@@ -65,57 +59,28 @@ body {
     font-size: 16px;
 }
 
-.navlinks a:hover {
-    text-decoration: none;
+
+/* Create three equal columns that floats next to each other */
+
+.column1 {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: 500px;
 }
 
-.tweetbtn {
-    height: 50px;
-    width: 200px;
-    border-radius: 40px;
-    background-color: rgb(29, 161, 242);
-    color: white;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 0px;
-    margin-top: 10px;
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
 }
 
-.tweetbtn:hover {
-    background-color: rgba(26, 145, 218);
-}
-
-.home {
-    display: flex;
-}
-
-.explore {
-    display: flex;
-}
-
-.notifications {
-    display: flex;
-}
-
-.messages {
-    display: flex;
-}
-
-.bookmarks {
-    display: flex;
-}
-
-.lists {
-    display: flex;
-}
-
-.profile {
-    display: flex;
-}
-
-.more {
-    display: flex;
+.column3 {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 500px;
 }
 
 
@@ -139,7 +104,6 @@ tr {
 #tweetBtn {
     margin-top: 10px;
     width: 300px;
-    margin-left: -18px
 }
 
 
@@ -245,13 +209,4 @@ h6 {
 #content .functionBar {
     display: flex;
     justify-content: space-between;
-}
-
-#content .row {
-    padding: 30px;
-    border: 1px solid lightgrey;
-}
-
-#content .row div {
-    margin-top: 4px;
 }
