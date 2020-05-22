@@ -1,4 +1,5 @@
 let tweetArea = document.getElementById("tweetArea");
+let contentArea = document.getElementById("content");
 const MAX_LETTER = 140;
 
 let tweetList = [];
@@ -32,7 +33,7 @@ const post = () => {
         title: "Sean",
         logo: "img/profileImages/talkSport.jpg",
         content: "Pro-democracy activists warn that the new legislation could mean “the end of Hong Kong”",
-        time: new Date().toISOString(),
+        time: "8mins",
         retweet: "6",
         likes: "20",
         comments: "10",
@@ -46,59 +47,47 @@ const post = () => {
     myTweet.content = input;
 
     tweetList.push(myTweet);
-    renderFromList();
+
+    let html = tweetList.map(x => {
+        return `<div class="row">
+        <div class="col-3">
+            <img src="${x.logo}" id="moreToFollowImg" alt="Avatar">
+        </div>
+        <div class="col-9">
+            <div>
+                <span id="tweetTitle">${x.title}</span>
+                <span><i class="ml-1 fas fa-badge-check"></i></span>
+                <span>${x.hashtag}</span>
+                <span>${x.time}</span>
+            </div>
+            <div>
+                ${x.content}
+            </div>
+            <div>
+                link
+            </div>
+            <div>
+                <i class="fal fa-comment"></i>
+                <i class="far fa-retweet"></i>
+                <i class="fal fa-heart"></i>
+                <i class="fal fa-upload"></i>
+            </div>
+        </div>
+    </div>`
+    }).join('')
+    $('#content').append(html);
 
 }
 
 tweetArea.addEventListener("input", countLetter);
 
-function deleteAll(id) {
-    let index = tweetList.findIndex(element => element.id == id)
-    tweetList.splice(index, 1)
-    console.log(tweetList)
-    renderFromList()
-}
-
-function renderFromList() {
-    tweetList.sort((a, b) => b.id - a.id);
-    let html = tweetList.map(element => {
-        return `<div class="row">
-        <div class="col-2">
-            <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
-        </div>
-        <div class="col-10">
-            <div>
-                <span id="tweetTitle">${element.title}</span>
-                <span><i class="ml-1 fas fa-badge-check"></i></span>
-                <span>${element.hashtag}</span>
-                <span>${moment(element.time).fromNow()}</span>
-            </div>
-            <div>
-                ${element.content}
-            </div>
-            <div>
-                link
-            </div>
-            <div class="functionBar">
-                <i class="fal fa-comment"></i>
-                <i class="far fa-retweet" onclick="retweet(${element.id})" style="cursor:pointer;"></i>
-                <i class="fal fa-heart"></i>
-                <i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
-            </div>
-        </div>
-    </div>`
-
-    }).join('')
-    $('#content').empty();
-    $('#content').append(html);
-}
 
 function retweet(id) {
     let original = tweetList.find(x => x.id == id);
     let child = {
-        id: tweetList.length ? tweetList.length : 0,
-        title: "Child",
-        logo: "https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg",
+        id: tweetList.length,
+        name: "testChild",
+        logo: "mylogo.png",
         content: original.content,
         time: "8mins",
         retweet: "6",
@@ -106,12 +95,12 @@ function retweet(id) {
         comments: "10",
         isTweet: true,
         parent: original.id,
-        hashtag: "@Child"
+        hastags: ["#teamMember", "#French"]
     }
 
     tweetList.push(child);
+
     console.log(tweetList);
-    renderFromList();
 }
 
 

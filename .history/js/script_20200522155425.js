@@ -27,12 +27,14 @@ const countLetter = () => {
 
 const post = () => {
 
+
+
     let myTweet = {
         id: tweetList.length ? tweetList.length : 0,
         title: "Sean",
         logo: "img/profileImages/talkSport.jpg",
         content: "Pro-democracy activists warn that the new legislation could mean “the end of Hong Kong”",
-        time: new Date().toISOString(),
+        time: "8mins",
         retweet: "6",
         likes: "20",
         comments: "10",
@@ -52,38 +54,31 @@ const post = () => {
 
 tweetArea.addEventListener("input", countLetter);
 
-function deleteAll(id) {
-    let index = tweetList.findIndex(element => element.id == id)
-    tweetList.splice(index, 1)
-    console.log(tweetList)
-    renderFromList()
-}
 
 function renderFromList() {
-    tweetList.sort((a, b) => b.id - a.id);
-    let html = tweetList.map(element => {
+    let html = tweetList.map(x => {
         return `<div class="row">
         <div class="col-2">
-            <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
+            <img src="${x.logo}" id="moreToFollowImg" alt="Avatar">
         </div>
         <div class="col-10">
             <div>
-                <span id="tweetTitle">${element.title}</span>
+                <span id="tweetTitle">${x.title}</span>
                 <span><i class="ml-1 fas fa-badge-check"></i></span>
-                <span>${element.hashtag}</span>
-                <span>${moment(element.time).fromNow()}</span>
+                <span>${x.hashtag}</span>
+                <span>${x.time}</span>
             </div>
             <div>
-                ${element.content}
+                ${x.content}
             </div>
             <div>
                 link
             </div>
-            <div class="functionBar">
+            <div>
                 <i class="fal fa-comment"></i>
-                <i class="far fa-retweet" onclick="retweet(${element.id})" style="cursor:pointer;"></i>
+                <i class="far fa-retweet" onclick="retweet(${x.id})" style="cursor:pointer;"></i>
                 <i class="fal fa-heart"></i>
-                <i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
+                <i class="fal fa-upload"></i>
             </div>
         </div>
     </div>`
@@ -99,7 +94,7 @@ function retweet(id) {
         id: tweetList.length ? tweetList.length : 0,
         title: "Child",
         logo: "https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg",
-        content: original.content,
+        content: original,
         time: "8mins",
         retweet: "6",
         likes: "20",
@@ -110,7 +105,7 @@ function retweet(id) {
     }
 
     tweetList.push(child);
-    console.log(tweetList);
+
     renderFromList();
 }
 

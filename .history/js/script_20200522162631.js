@@ -27,6 +27,9 @@ const countLetter = () => {
 
 const post = () => {
 
+    alert(new Date().toISOString())
+
+
     let myTweet = {
         id: tweetList.length ? tweetList.length : 0,
         title: "Sean",
@@ -60,7 +63,6 @@ function deleteAll(id) {
 }
 
 function renderFromList() {
-    tweetList.sort((a, b) => b.id - a.id);
     let html = tweetList.map(element => {
         return `<div class="row">
         <div class="col-2">
@@ -71,7 +73,7 @@ function renderFromList() {
                 <span id="tweetTitle">${element.title}</span>
                 <span><i class="ml-1 fas fa-badge-check"></i></span>
                 <span>${element.hashtag}</span>
-                <span>${moment(element.time).fromNow()}</span>
+                <span>${element.time}</span>
             </div>
             <div>
                 ${element.content}
@@ -79,7 +81,7 @@ function renderFromList() {
             <div>
                 link
             </div>
-            <div class="functionBar">
+            <div>
                 <i class="fal fa-comment"></i>
                 <i class="far fa-retweet" onclick="retweet(${element.id})" style="cursor:pointer;"></i>
                 <i class="fal fa-heart"></i>

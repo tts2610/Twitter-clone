@@ -79,7 +79,7 @@ function renderFromList() {
             <div>
                 link
             </div>
-            <div class="functionBar">
+            <div>
                 <i class="fal fa-comment"></i>
                 <i class="far fa-retweet" onclick="retweet(${element.id})" style="cursor:pointer;"></i>
                 <i class="fal fa-heart"></i>

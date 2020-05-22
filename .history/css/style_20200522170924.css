@@ -13,7 +13,7 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 280px;
+    width: 260px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -21,7 +21,7 @@ body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     padding-top: 20px;
-    border-right: 1px solid lightgrey;
+    /* border-right: 1px solid lightgrey; */
 }
 
 .sidenav a {
@@ -56,7 +56,7 @@ body {
 }
 
 .navlinks {
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .navlinks a {
@@ -139,7 +139,6 @@ tr {
 #tweetBtn {
     margin-top: 10px;
     width: 300px;
-    margin-left: -18px
 }
 
 
