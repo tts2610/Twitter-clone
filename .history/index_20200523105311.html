@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" /> -->
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="row my-3">
+                    <div class="col"><img src="/img/twt-logo1.png" alt="twitter-logo" width="50" height="50"></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row my-5">
+                    <div id="outerMenuContainer">
+                        <div class="col-2 mr-4 py-2 pl-3"><i class="fas fa-home fa-2x"></i></div>
+                        <div class="col-10 py-2 px-2" style="margin-right: 0px;padding-right: 0px;"> <a href="#Home">Home</a></div>
+                    </div>
+
+                </div>
+                <div class="row my-3">
+                    <div class="col-2"><i class="fas fa-hashtag fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#services">Explore</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-bell fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#clients">Notifications</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-envelope fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#contact">Messages</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-bookmark fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#clients">Bookmarks</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-list-alt fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#contact">Lists</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-user fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#clients">Profile</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><i class="far fa-comment-dots fa-2x"></i></div>
+                    <div class="col-10" style="margin-right: 0px;padding-right: 0px;"><a href="#contact">More</a></div>
+                </div>
+                <div class="row">
+                    <button class="tweetbtn" href="#">Tweet</button>
+                </div>
+            </div>
+            <div class="col-5">
+                <h2>Main Section</h2>
+                <input type="text" id="tweetArea" placeholder="What's happening">
+                <button id="tweetBtn" onclick="post()">Tweet</button>
+                <span id="remain"></span>
+                <div id="content" class="mt-5">
+
+                </div>
+            </div>
+
+            <div class="col-4">
+
+                <div id="trendings" class="px-3">
+                    <ul class="list-group mb-3">
+                        <!-- <li class="list-group-item d-flex justify-content-between lh-condensed header" style="border-radius: 15px 15px 0px 0px;" id="trendingHeader">
+                            <div>
+                                <div class="trends-header">Trends for you</div>
+                            </div>
+                            <span class="text-muted"><i class="fal fa-cog" style="COLOR: rgba(29,161,242,1.00); font-size: larger;"></i></span>
+                        </li> -->
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" id="trending1">
+                            <div>
+                                <small class="text-muted">Trendings in Vietnam</small>
+                                <h6 class="my-0 hashtag">#Hanoi</h6>
+                                <small class="text-muted">4,661 Tweets</small>
+                            </div>
+                            <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" id="trending2">
+                            <div>
+                                <small class="text-muted">kpop . Treding</small>
+                                <h6 class="my-0 hashtag">#Jimin Trending</h6>
+                                <small class="text-muted">3,266 Tweets</small>
+                            </div>
+                            <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" id="trending3">
+                            <div>
+                                <small class="text-muted">Trendings in Vietnam</small>
+                                <h6 class="my-0 hashtag">#Hanoi</h6>
+                                <small class="text-muted">4,661 Tweets</small>
+                            </div>
+                            <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" id="trending4">
+                            <div>
+                                <small class="text-muted">kpop . Treding</small>
+                                <h6 class="my-0 hashtag">#Jimin Trending</h6>
+                                <small class="text-muted">3,266 Tweets</small>
+                            </div>
+                            <span class="text-muted"><i class="fas fa-chevron-down"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" style="border-radius: 0px 0px 15px 15px">
+                            <div>
+                                <h6 class="my-0"><a href="#" style="COLOR: rgba(29,161,242,1.00); text-decoration: none;">Show more</a></h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="whoToFollow" class="px-3">
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed" style="border-radius: 15px 15px 0px 0px;">
+                            <div>
+                                <h5 class="whoToFollow-header">Who to follow</h5>
+                            </div>
+                        </li>
+                        <li class="list-group-item content">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
+                                </div>
+                                <div class="col-6">
+                                    <div style="display: flex;">
+                                        <h6 class="my-0 hashtag">@talkSPORT</h6>
+                                        <i class="ml-1 fas fa-badge-check"></i>
+                                    </div>
+
+                                    <small class="text-muted">talkSPORT</small>
+
+                                </div>
+                                <div class="col-4">
+                                    <a href="#" class="followBtn">Follow</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item content">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
+                                </div>
+                                <div class="col-6">
+                                    <div style="display: flex;">
+                                        <h6 class="my-0 hashtag">@premierleague</h6>
+                                        <i class="ml-1 fas fa-badge-check"></i>
+                                    </div>
+
+                                    <small class="text-muted">Premier League</small>
+
+                                </div>
+                                <div class="col-4">
+                                    <a href="#" class="followBtn">Follow</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item content">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/CNN_International_logo.svg/1200px-CNN_International_logo.svg.png" id="moreToFollowImg" alt="Avatar">
+                                </div>
+                                <div class="col-6">
+                                    <div style="display: flex;">
+                                        <h6 class="my-0 hashtag">@cnni</h6>
+                                        <i class="ml-1 fas fa-badge-check"></i>
+                                    </div>
+
+                                    <small class="text-muted">CNN International</small>
+
+                                </div>
+                                <div class="col-4">
+                                    <a href="#" class="followBtn">Follow</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed content" style="border-radius: 0px 0px 15px 15px">
+                            <div>
+                                <h6 class="my-0"><a href="#" style="COLOR: rgba(29,161,242,1.00); text-decoration: none;">Show more</a></h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav> -->
+        <!-- <div class="column2">
+
+        </div>
+
+        <div class="column3">
+
+        </div> -->
+
+
+        <!-- END COL-3 -->
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/moment.js"></script>
+</body>
+
+</html>

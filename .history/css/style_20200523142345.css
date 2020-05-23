@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 70% !important;
+}
+
+
+/* .container {
+    width: 60%;
+} */
+
+#leftNav {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    font-weight: 800;
+    background-color: white;
+}
+
+#rightNav {
+    width: 100%;
+}
+
+#rightNav .input-group-prepend {
+    background-color: white !important;
+    color: white !important;
+}
+
+#search {
+    border-radius: 30px;
+    height: 10px;
+    padding: 20px;
+    position: relative;
+    width: 318px;
+    background-color: #e6ecf0;
+}
+
+.sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 1px solid lightgrey;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    ;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.sidenav a:hover {
+    color: #16afdd;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav /
+    font-size: 28px; / Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.tweetbtn {
+    height: 50px;
+    width: 200px;
+    border-radius: 40px;
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.tweetbtn:hover {
+    background-color: rgba(26, 145, 218);
+}
+
+.home {
+    display: flex;
+}
+
+.explore {
+    display: flex;
+}
+
+.notifications {
+    display: flex;
+}
+
+.messages {
+    display: flex;
+}
+
+.bookmarks {
+    display: flex;
+}
+
+.lists {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+}
+
+.more {
+    display: flex;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+tr {
+    text-align: center;
+}
+
+#tweetArea {
+    width: 300px;
+    height: 100px
+}
+
+#tweetBtn {
+    margin-top: 10px;
+    width: 300px;
+}
+
+
+/* #trendings {
+    background-color: #f5f8fa;
+} */
+
+#trendings .list-group-item {
+    background-color: #f5f8fa;
+}
+
+#trendings .content {
+    cursor: pointer;
+}
+
+#trendings .trends-header {
+    font-weight: 800;
+    font-size: larger;
+}
+
+#trendings .content:hover {
+    filter: brightness(97%)
+}
+
+#trendings ul li .hashtag {
+    font-weight: 700;
+}
+
+#moreToFollowImg {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.fa-badge-check {
+    color: rgba(29, 161, 242, 1.00);
+}
+
+.followBtn {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 25px;
+    color: #1DA1F2;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 3px;
+    background-color: #FFFFFF;
+    border: solid #1DA1F2 1px;
+    text-decoration: none;
+    /* display: inline-block; */
+    cursor: pointer;
+    text-align: center;
+}
+
+.followBtn:hover {
+    color: #1DA1F2;
+    background: #CFE7F6;
+    border-radius: 25px;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+#whoToFollow .list-group-item {
+    background-color: #f5f8fa;
+}
+
+#whoToFollow .content {
+    cursor: pointer;
+}
+
+#whoToFollow .content:hover {
+    filter: brightness(97%)
+}
+
+#whoToFollow .row .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#whoToFollow .row .col-6 .hashtag {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#whoToFollow .row .col-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#whoToFollow .whoToFollow-header {
+    font-weight: 800;
+    font-size: larger;
+}
+
+h6 {
+    font-weight: 700;
+}
+
+#content .functionBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .row {
+    padding: 30px;
+    border: 1px solid lightgrey;
+}
+
+#content .row div {
+    margin-top: 4px;
+}
+
+#outerMenuContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+}
+
+#outerMenuContainer:hover {
+    color: #1DA1F2 !important;
+    background: #CFE7F6;
+    border-radius: 25px;
+    text-decoration: none;
+    opacity: 0.7;
+    /* padding: 5px 0px 5px 3px;
+    width: max-content; */
+}
+
+#outerMenuContainer:hover a {
+    color: #1DA1F2 !important;
+}
+
+#outerMenuContainer a {
+    text-decoration: none;
+    color: black;
+}
