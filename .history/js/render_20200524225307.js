@@ -188,7 +188,7 @@ function renderTweetWithVideo(element) {
 
 function renderRetweet(element) {
     let parentTweet = tweetList.find(x => x.id == element.parent);
-    if (parentTweet.content.videoLink !== '' && parentTweet.content.images.length == 0) {
+    if (element.content.videoLink !== '' && element.content.images.length == 0) {
         return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">
             <div class="col-2">
@@ -243,8 +243,7 @@ function renderRetweet(element) {
     </div>
             <hr/>`
     }
-    if (parentTweet.content.videoLink == '' && parentTweet.content.images.length == 0) {
-        alert("bbb");
+    if (element.content.videoLink == '' && element.content.images.length == 0) {
         return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">
             <div class="col-2">
@@ -421,7 +420,6 @@ function renderModal(id) {
     </div>
 </div>`
     } else if (thisElement.content.videoLink == '' && thisElement.content.images.length == 0) {
-        alert("aaa");
         myModal = `<div class="modal fade" id="retweetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

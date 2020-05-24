@@ -83,7 +83,7 @@ const post = () => {
 
     tweetList.push(myTweet);
     renderFromList();
-    radialObj.value(0);
+    initRadial();
     console.log(tweetList);
     $("#inputArea #tweetArea").empty();
     // $("#inputArea .col-11 .jqueryHashtags").remove();

@@ -33,7 +33,7 @@ let news_3 = {
     id: tweetList.length ? tweetList.length : 0,
     title: "Discovery",
     logo: "https://logosvector.net/wp-content/uploads/2014/10/discovery-channel-logo.png",
-    content: { description: 'Son Doong cave(Vietnamese: Hang Son Doong) is world\'s largest cave, located in Quang Binh province, Vietnam. It is found by a local man named Ho Khanh in 1991 and was recently discovered in 2009 by British cavers, led by Howard Limbert &#128563 &#128664 &#128755', images: [], videoLink: "https://www.youtube.com/embed/bTqVqk7FSmY?autoplay=1&mute=1" },
+    content: { description: 'Son Doong cave(Vietnamese: Hang Son Doong) is world\'s largest cave, located in Quang Binh province, Vietnam. It is found by a local man named Ho Khanh in 1991 and was recently discovered in 2009 by British cavers, led by Howard Limbert &#128563', images: [], videoLink: "https://www.youtube.com/embed/bTqVqk7FSmY?autoplay=1&mute=1" },
     time: new Date().toISOString(),
     retweet: "7",
     likes: "20",

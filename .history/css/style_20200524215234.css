@@ -373,7 +373,7 @@ h6 {
     cursor: pointer;
 }
 
-#indicatorContainer canvas {
-    width: 50px !important;
-    height: 50px !important;
-}
+
+/* #indicatorContainer{
+    width: 10px;
+} */

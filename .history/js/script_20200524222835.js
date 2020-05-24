@@ -48,7 +48,6 @@ const countLetter = () => {
         // document.getElementById("remain").innerHTML = `${remain} left`;
         // document.getElementById("remain").style.color = "black";
     }
-
 }
 
 const post = () => {
@@ -83,7 +82,6 @@ const post = () => {
 
     tweetList.push(myTweet);
     renderFromList();
-    radialObj.value(0);
     console.log(tweetList);
     $("#inputArea #tweetArea").empty();
     // $("#inputArea .col-11 .jqueryHashtags").remove();
@@ -221,13 +219,8 @@ $(document).ready(function() {
         element.empty();
     }
 
-    initRadial();
     renderFromList();
 
-
-})
-
-function initRadial() {
     $('#indicatorContainer').radialIndicator({
         barColor: {
             0: '#1DA1F2',
@@ -244,7 +237,7 @@ function initRadial() {
         displayNumber: true,
     });
     radialObj = $('#indicatorContainer').data('radialIndicator');
-}
+})
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {

@@ -372,8 +372,3 @@ h6 {
     color: #16a2f2;
     cursor: pointer;
 }
-
-#indicatorContainer canvas {
-    width: 50px !important;
-    height: 50px !important;
-}

@@ -188,7 +188,7 @@ function renderTweetWithVideo(element) {
 
 function renderRetweet(element) {
     let parentTweet = tweetList.find(x => x.id == element.parent);
-    if (parentTweet.content.videoLink !== '' && parentTweet.content.images.length == 0) {
+    if (element.content.videoLink !== '' && element.content.images.length == 0) {
         return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">
             <div class="col-2">
@@ -243,7 +243,7 @@ function renderRetweet(element) {
     </div>
             <hr/>`
     }
-    if (parentTweet.content.videoLink == '' && parentTweet.content.images.length == 0) {
+    if (element.content.videoLink == '' && element.content.images.length == 0) {
         alert("bbb");
         return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">

@@ -37,18 +37,15 @@ const countLetter = () => {
         //  Disable button after 140 characters
         $("#inputArea .inputArea-tweetbtn").attr("disabled", true);
         $("#inputArea .inputArea-tweetbtn").css("opacity", 0.5);
-        $("#indicatorContainer").addClass("animate__animated animate__bounce");
 
-        // document.getElementById("remain").innerHTML = `${remain} left`;
-        // document.getElementById("remain").style.color = "red";
+        document.getElementById("remain").innerHTML = `${remain} left`;
+        document.getElementById("remain").style.color = "red";
     } else {
         $("#inputArea .inputArea-tweetbtn").attr("disabled", false);
         $("#inputArea .inputArea-tweetbtn").css("opacity", 1.0);
-        $("#indicatorContainer").removeClass("animate__animated animate__bounce");
-        // document.getElementById("remain").innerHTML = `${remain} left`;
-        // document.getElementById("remain").style.color = "black";
+        document.getElementById("remain").innerHTML = `${remain} left`;
+        document.getElementById("remain").style.color = "black";
     }
-
 }
 
 const post = () => {
@@ -83,7 +80,6 @@ const post = () => {
 
     tweetList.push(myTweet);
     renderFromList();
-    radialObj.value(0);
     console.log(tweetList);
     $("#inputArea #tweetArea").empty();
     // $("#inputArea .col-11 .jqueryHashtags").remove();
@@ -221,13 +217,8 @@ $(document).ready(function() {
         element.empty();
     }
 
-    initRadial();
     renderFromList();
 
-
-})
-
-function initRadial() {
     $('#indicatorContainer').radialIndicator({
         barColor: {
             0: '#1DA1F2',
@@ -244,7 +235,7 @@ function initRadial() {
         displayNumber: true,
     });
     radialObj = $('#indicatorContainer').data('radialIndicator');
-}
+})
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {

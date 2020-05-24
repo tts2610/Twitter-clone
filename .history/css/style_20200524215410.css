@@ -374,6 +374,6 @@ h6 {
 }
 
 #indicatorContainer canvas {
-    width: 50px !important;
-    height: 50px !important;
+    width: 20px;
+    height: 20px;
 }

@@ -44,10 +44,14 @@ const countLetter = () => {
     } else {
         $("#inputArea .inputArea-tweetbtn").attr("disabled", false);
         $("#inputArea .inputArea-tweetbtn").css("opacity", 1.0);
-        $("#indicatorContainer").removeClass("animate__animated animate__bounce");
+        // $("#indicatorContainer").removeClass("animate__animated animate__bounce");
         // document.getElementById("remain").innerHTML = `${remain} left`;
         // document.getElementById("remain").style.color = "black";
     }
+
+    setTimeout(function() {
+        $("#indicatorContainer").removeClass("animate__animated animate__bounce")
+    }, 2000);
 
 }
 
@@ -83,7 +87,6 @@ const post = () => {
 
     tweetList.push(myTweet);
     renderFromList();
-    radialObj.value(0);
     console.log(tweetList);
     $("#inputArea #tweetArea").empty();
     // $("#inputArea .col-11 .jqueryHashtags").remove();
@@ -221,13 +224,8 @@ $(document).ready(function() {
         element.empty();
     }
 
-    initRadial();
     renderFromList();
 
-
-})
-
-function initRadial() {
     $('#indicatorContainer').radialIndicator({
         barColor: {
             0: '#1DA1F2',
@@ -244,7 +242,7 @@ function initRadial() {
         displayNumber: true,
     });
     radialObj = $('#indicatorContainer').data('radialIndicator');
-}
+})
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {
