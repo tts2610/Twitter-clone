@@ -51,34 +51,7 @@ function renderFromList() {
         }
         if (element.content.videoLink == '' && element.content.images.length == 0) {
 
-            return `<div id="content" class="px-5 py-3">
-            <div class="row">
-                <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
-                </div>
-                <div class="col-10">
-                    <div>
-                        <span id="tweetTitle">${element.title}</span>
-                        <span><i class="ml-1 fas fa-badge-check"></i></span>
-                        <span id="tweetAt">${element.at}</span>
-                        <span id="tweetTime">${moment(element.time).fromNow()}</span>
-                    </div>
-                    <div class="mt-3">${renderDescription(element.id)}</div>
-                </div>
-            </div>
-            <div class="row pt-3" style="display: flex; justify-content: center;">
-            </div>
-            <div class="row pt-3 functionBar">
-                <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
-                </div>
-                <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
-                </div>
-                <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
-                </div>
-                <div class="upload-func"><i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
-                </div>
-            </div>
-        </div>
-            <hr/>`
+            return `<h1>DMM</h1>`
         }
 
 

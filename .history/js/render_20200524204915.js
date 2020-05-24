@@ -42,18 +42,19 @@ function renderFromList() {
     let html = tweetList.map(element => {
         // let myFunc = renderModal(JSON.stringify(element));
         if (element.parent != null) {
-
+            alert("1");
             return renderRetweet(element);
         }
         if (element.content.videoLink !== '' && element.content.images.length == 0) {
-
+            alert("2");
             return renderTweetWithVideo(element);
         }
         if (element.content.videoLink == '' && element.content.images.length == 0) {
-
+            alert("3");
             return `<div id="content" class="px-5 py-3">
             <div class="row">
-                <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
+                <div class="col-2">
+                    <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
                 </div>
                 <div class="col-10">
                     <div>
@@ -65,23 +66,32 @@ function renderFromList() {
                     <div class="mt-3">${renderDescription(element.id)}</div>
                 </div>
             </div>
-            <div class="row pt-3" style="display: flex; justify-content: center;">
-            </div>
+            <div class="row pt-3" style="display: flex; justify-content: center;"></div>
             <div class="row pt-3 functionBar">
-                <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
+                <div class="comment-func">
+                  <i class="fal fa-comment"></i>
+                  <span class="ml-3">${element.comments}</span>
                 </div>
-                <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+                  
+                <div class="retweet-func">
+                  <i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i>
+                  <span class="ml-3">${element.retweet}</span>
                 </div>
-                <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
+                  
+                <div class="like-func">
+                  <i class="fal fa-heart"><i class="fal fa-heart"></i>
+                  <span class="ml-3">${element.likes}</span>
                 </div>
-                <div class="upload-func"><i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
+                  
+                <div class="upload-func">
+                  <i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
                 </div>
             </div>
         </div>
             <hr/>`
         }
 
-
+        alert("4");
         return `<div id="content" class="px-5 py-3">
         <div class="row">
             <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
@@ -219,49 +229,49 @@ function renderModal(id) {
     let thisElement = tweetList.find(x => x.id == id);
 
     let myModal = `<div class="modal fade" id="retweetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-1">
-                        <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
-                    </div>
-                    <div class="col-11">
-                        <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
-
-                        <div class="px-5 py-3" style="border: 5px solid #e6ecf0;border-radius:20px">
-                            <div class="row">
-                                <div class="col-2">
-                                    <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
-                                </div>
-                                <div class="col-10">
-                                    <div>
-                                        <span id="tweetTitle">${thisElement.title}</span>
-                                        <span><i class="ml-1 fas fa-badge-check"></i></span>
-                                        <span id="tweetAt">${thisElement.at}</span>
-                                        <span id="tweetTime">${moment(thisElement.time).fromNow()}</span>
-
-                                    </div>
-                                    <div>${thisElement.content.description}</div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="row pt-3" style="display: flex; justify-content: center;">
-                                <div id="image-container-tweet">${renderImgs(thisElement)}</div>
-                            </div>
-
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
                         </div>
+                        <div class="col-11">
+                            <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
+                            
+                            <div class="px-5 py-3" style="border: 5px solid #e6ecf0;border-radius:20px">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
+                                    </div>
+                                    <div class="col-10">
+                                        <div>                
+                                            <span id="tweetTitle">${thisElement.title}</span>                    
+                                            <span><i class="ml-1 fas fa-badge-check"></i></span>                    
+                                            <span id="tweetAt">${thisElement.at}</span>
+                                            <span id="tweetTime">${moment(thisElement.time).fromNow()}</span>
+                    
+                                        </div>                    
+                                        <div>${thisElement.content.description}</div>
+                                    </div>
 
-                        <span id="remain"></span>
-                        <!--  -->
+                                </div>
 
+                                
+                                <div class="row pt-3" style="display: flex; justify-content: center;">
+                                    <div id="image-container-tweet">${renderImgs(thisElement)}</div>
+                                </div>
+
+                            </div>
+                            
+                            <span id="remain"></span>
+                            <!--  -->
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -275,11 +285,11 @@ function renderModal(id) {
                         <button class="tweetbtn inputArea-tweetbtn" href="#" onclick="retweet(${thisElement.id})" style="width: 100px; margin-left: 21px;">Retweet</button>
 
                     </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</div>`
+    </div>`
 
     $(document.body).append(myModal);
     $('#retweetModal').modal('show');

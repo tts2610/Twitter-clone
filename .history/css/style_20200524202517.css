@@ -353,22 +353,16 @@ h6 {
     border-radius: 20px;
 }
 
-.comment-func:hover {
+.fa-comment {
+    padding: 10px;
+}
+
+.fa-comment:hover {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #16a2f2;
+}
+
+.fa-comment-number:hover {
     color: #16a2f2;
-    cursor: pointer;
-}
-
-.retweet-func:hover {
-    color: lightgreen;
-    cursor: pointer;
-}
-
-.like-func:hover {
-    color: lightpink;
-    cursor: pointer;
-}
-
-.upload-func:hover {
-    color: #16a2f2;
-    cursor: pointer;
 }

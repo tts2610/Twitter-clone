@@ -117,7 +117,9 @@ function renderDescription(id) {
     let desArr = element.content.description.split(' ');
     let html = '';
     desArr.forEach(element => {
-        if (!element.startsWith("#")) {
+        if (element.startsWith("#")) {
+            html += `<a class="mx-3" onclick="renderHashTags('${element}')" href="#">${element}</a>`
+        } else {
             html += ` ${element}`
         }
     });

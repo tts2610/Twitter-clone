@@ -2,7 +2,6 @@ let tweetArea = $("#tweetArea");
 const MAX_LETTER = 140;
 let srcImgList = [];
 
-
 const fileInput = document.getElementById("file-input");
 const img = document.getElementById("my-img");
 let classImgList;
@@ -112,21 +111,16 @@ function deleteAll(id) {
     renderFromList()
 }
 
-function renderDescription(id) {
-    let element = tweetList.find(x => x.id == id);
-    let desArr = element.content.description.split(' ');
+function renderDescription(description) {
+    let desArr = description.split(' ');
     let html = '';
     desArr.forEach(element => {
-        if (!element.startsWith("#")) {
-            html += ` ${element}`
+        if (element.startsWith("#")) {
+            html += `<a class="mx-3" onclick="renderHashTags('${element}')" href="#">${element}</a>`
+        } else {
+            html += `<span>${element}</span>`
         }
     });
-
-    if (element.hashTags.length != 0) {
-        element.hashTags.forEach(element => {
-            html += `<a class="mx-3" onclick="renderHashTags('${element}')" href="#">${element}</a>`
-        });
-    }
 
     return html;
 }
@@ -216,8 +210,11 @@ $(document).ready(function() {
         element.empty();
     }
 
-    renderFromList();
 })
+
+jQuery(function($) {
+
+});
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {

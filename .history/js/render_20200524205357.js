@@ -66,6 +66,7 @@ function renderFromList() {
                 </div>
             </div>
             <div class="row pt-3" style="display: flex; justify-content: center;">
+                <div id="image-container-tweet">${renderImgs(element)}</div>
             </div>
             <div class="row pt-3 functionBar">
                 <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>

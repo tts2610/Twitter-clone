@@ -113,11 +113,14 @@ function deleteAll(id) {
 }
 
 function renderDescription(id) {
-    let element = tweetList.find(x => x.id == id);
+    let element = tweetList.filter(x => x.id == id);
+    alert(element.content.description);
     let desArr = element.content.description.split(' ');
     let html = '';
     desArr.forEach(element => {
-        if (!element.startsWith("#")) {
+        if (element.startsWith("#")) {
+            html += `<a class="mx-3" onclick="renderHashTags('${element}')" href="#">${element}</a>`
+        } else {
             html += ` ${element}`
         }
     });
@@ -217,7 +220,12 @@ $(document).ready(function() {
     }
 
     renderFromList();
+
 })
+
+jQuery(function($) {
+
+});
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {

@@ -352,23 +352,3 @@ h6 {
     border-style: solid;
     border-radius: 20px;
 }
-
-.comment-func:hover {
-    color: #16a2f2;
-    cursor: pointer;
-}
-
-.retweet-func:hover {
-    color: lightgreen;
-    cursor: pointer;
-}
-
-.like-func:hover {
-    color: lightpink;
-    cursor: pointer;
-}
-
-.upload-func:hover {
-    color: #16a2f2;
-    cursor: pointer;
-}

@@ -10,7 +10,7 @@ let news_1 = {
     comments: "10",
     parent: null,
     at: "@ESPNNBA",
-    hashTags: ["#NBA", "#FunFacts"]
+    hashTags: ["#ManOfTheYear", "Triumph"]
 }
 tweetList.push(news_1);
 let news_2 = {

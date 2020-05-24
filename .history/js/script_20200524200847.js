@@ -117,7 +117,9 @@ function renderDescription(id) {
     let desArr = element.content.description.split(' ');
     let html = '';
     desArr.forEach(element => {
-        if (!element.startsWith("#")) {
+        if (element.startsWith("#")) {
+            html += `<a class="mx-3" onclick="renderHashTags('${element}')" href="#">${element}</a>`
+        } else {
             html += ` ${element}`
         }
     });
@@ -217,7 +219,16 @@ $(document).ready(function() {
     }
 
     renderFromList();
+    setTimeout(countUp, 2000);
+
 })
+
+// function countUp() {
+//     let current_comment = parseInt($("#comment").text())
+//     $("#comment").text(++current_comment)
+//     $("#comment").fadeIn(3000);
+//     setTimeout(countUp, 2000);
+// }
 
 function checkInputFields() {
     if ($("#tweetArea").text() === '') {
