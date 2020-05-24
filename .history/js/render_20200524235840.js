@@ -214,10 +214,10 @@ function renderRetweet(element) {
                         <div>
                             <span id="tweetTitle">${parentTweet.title }</span>
                             <span><i class="ml-1 fas fa-badge-check"></i></span>
-                            <span id="tweetAt">${parentTweet.at}</span>
-                            <span id="tweetTime">${moment(parentTweet.time).fromNow()}</span>
+                            <span id="tweetAt">${element.at}</span>
+                            <span id="tweetTime">${moment(element.time).fromNow()}</span>
                         </div>
-                        <div>${renderDescription(parentTweet.id)}</div>
+                        <div>${renderDescription(element.id)}</div>
                     </div>
                 </div>
                 <div class="row pt-3" style="display: flex; justify-content: center;">
@@ -244,6 +244,7 @@ function renderRetweet(element) {
             <hr/>`
     }
     if (parentTweet.content.videoLink == '' && parentTweet.content.images.length == 0) {
+        alert("bbb");
         return `<div id="content" class="px-5 py-3">
         <div class="row">
             <div class="col-2">
@@ -269,10 +270,10 @@ function renderRetweet(element) {
                         <div>
                             <span id="tweetTitle">${parentTweet.title }</span>
                             <span><i class="ml-1 fas fa-badge-check"></i></span>
-                            <span id="tweetAt">${parentTweet.at}</span>
-                            <span id="tweetTime">${moment(parentTweet.time).fromNow()}</span>
+                            <span id="tweetAt">${element.at}</span>
+                            <span id="tweetTime">${moment(element.time).fromNow()}</span>
                         </div>
-                        <div>${renderDescription(parentTweet.id)}</div>
+                        <div>${renderDescription(element.id)}</div>
                     </div>
                 </div>
     

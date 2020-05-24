@@ -29,11 +29,11 @@ function renderHashtagFilter(filterList) {
             <div class="row pt-3 functionBar">
                 <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
                 </div>
-                <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+                <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
                 </div>
                 <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
                 </div>
-                <div class="upload-func"><i class="fal fa-upload" onclick="#"></i>
+                <div class="upload-func"><i class="fal fa-upload" onclick="deleteAll(${element.id})"></i>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ function renderHashtagFilter(filterList) {
                     <div id="image-container-tweet">${renderImgs(element)}</div>
                 </div><div class="row pt-3 functionBar">
                 <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span></div>
-                <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span></div>
+                <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span></div>
                 <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span></div>
                 <div class="upload-func"><i class="fal fa-upload" onclick="deleteAll(${element.id})"></i></div>
         </div>
@@ -101,7 +101,7 @@ function renderFromList() {
             <div class="row pt-3 functionBar">
                 <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
                 </div>
-                <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+                <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
                 </div>
                 <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
                 </div>
@@ -133,7 +133,7 @@ function renderFromList() {
         <div class="row pt-3 functionBar">
             <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
             </div>
-            <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+            <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
             </div>
             <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
             </div>
@@ -173,7 +173,7 @@ function renderTweetWithVideo(element) {
     <div class="row pt-3 functionBar">
         <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
         </div>
-        <div class="retweet-func" onclick="renderModal(${element.id})" ><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+        <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
         </div>
         <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
         </div>
@@ -214,10 +214,10 @@ function renderRetweet(element) {
                         <div>
                             <span id="tweetTitle">${parentTweet.title }</span>
                             <span><i class="ml-1 fas fa-badge-check"></i></span>
-                            <span id="tweetAt">${parentTweet.at}</span>
-                            <span id="tweetTime">${moment(parentTweet.time).fromNow()}</span>
+                            <span id="tweetAt">${element.at}</span>
+                            <span id="tweetTime">${moment(element.time).fromNow()}</span>
                         </div>
-                        <div>${renderDescription(parentTweet.id)}</div>
+                        <div>${renderDescription(element.id)}</div>
                     </div>
                 </div>
                 <div class="row pt-3" style="display: flex; justify-content: center;">
@@ -232,7 +232,7 @@ function renderRetweet(element) {
         <div class="row pt-3 functionBar">
             <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
             </div>
-            <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon"  style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+            <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
             </div>
             <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
             </div>
@@ -244,6 +244,7 @@ function renderRetweet(element) {
             <hr/>`
     }
     if (parentTweet.content.videoLink == '' && parentTweet.content.images.length == 0) {
+        alert("bbb");
         return `<div id="content" class="px-5 py-3">
         <div class="row">
             <div class="col-2">
@@ -269,10 +270,10 @@ function renderRetweet(element) {
                         <div>
                             <span id="tweetTitle">${parentTweet.title }</span>
                             <span><i class="ml-1 fas fa-badge-check"></i></span>
-                            <span id="tweetAt">${parentTweet.at}</span>
-                            <span id="tweetTime">${moment(parentTweet.time).fromNow()}</span>
+                            <span id="tweetAt">${element.at}</span>
+                            <span id="tweetTime">${moment(element.time).fromNow()}</span>
                         </div>
-                        <div>${renderDescription(parentTweet.id)}</div>
+                        <div>${renderDescription(element.id)}</div>
                     </div>
                 </div>
     
@@ -335,7 +336,7 @@ function renderRetweet(element) {
     <div class="row pt-3 functionBar">
         <div class="comment-func"><i class="fal fa-comment"></i><span class="ml-3">${element.comments}</span>
         </div>
-        <div class="retweet-func" onclick="renderModal(${element.id})"><i class="far fa-retweet" id="reTweetIcon" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
+        <div class="retweet-func"><i class="far fa-retweet" id="reTweetIcon" onclick="renderModal(${element.id})" style="cursor:pointer;"></i><span class="ml-3">${element.retweet}</span>
         </div>
         <div class="like-func"><i class="fal fa-heart"></i><span class="ml-3">${element.likes}</span>
         </div>
