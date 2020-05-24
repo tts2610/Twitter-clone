@@ -10,7 +10,7 @@ function renderHashtagFilter(filterList) {
         }
         if (element.content.videoLink == '' && element.content.images.length == 0) {
 
-            return `<div id="content" class="px-5 py-3">
+            return `<div id="content" class="px-5 py-3 lazy">
             <div class="row">
                 <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
                 </div>
@@ -39,7 +39,7 @@ function renderHashtagFilter(filterList) {
         </div>
             <hr/>`
         }
-        return `<div id="content" class="px-5 py-3">
+        return `<div id="content" class="px-5 py-3 lazy">
         <div class="row"><div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
         </div>
             <div class="col-10">
@@ -82,7 +82,7 @@ function renderFromList() {
         }
         if (element.content.videoLink == '' && element.content.images.length == 0) {
 
-            return `<div id="content" class="px-5 py-3">
+            return `<div id="content" class="px-5 py-3 lazy">
             <div class="row">
                 <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
                 </div>
@@ -151,7 +151,7 @@ function renderFromList() {
 
 
 function renderTweetWithVideo(element) {
-    return `<div id="content" class="px-5 py-3">
+    return `<div id="content" class="px-5 py-3 lazy">
     <div class="row">
         <div class="col-2"><img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
         </div>
@@ -189,7 +189,7 @@ function renderTweetWithVideo(element) {
 function renderRetweet(element) {
     let parentTweet = tweetList.find(x => x.id == element.parent);
     if (parentTweet.content.videoLink !== '' && parentTweet.content.images.length == 0) {
-        return `<div id="content" class="px-5 py-3">
+        return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">
             <div class="col-2">
                 <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
@@ -245,7 +245,7 @@ function renderRetweet(element) {
     }
     if (parentTweet.content.videoLink == '' && parentTweet.content.images.length == 0) {
         alert("bbb");
-        return `<div id="content" class="px-5 py-3">
+        return `<div id="content" class="px-5 py-3 lazy">
         <div class="row">
             <div class="col-2">
                 <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
@@ -295,7 +295,7 @@ function renderRetweet(element) {
             <hr/>`
     }
     return `
-    <div id="content" class="px-5 py-3">
+    <div id="content" class="px-5 py-3 lazy">
     <div class="row">
         <div class="col-2">
             <img src="${element.logo}" id="moreToFollowImg" alt="Avatar">
@@ -372,7 +372,7 @@ function renderModal(id) {
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
 
-                        <div class="px-5 py-3 mb-3" style="border: 5px solid #e6ecf0;border-radius:20px">
+                        <div class="px-5 py-3" style="border: 5px solid #e6ecf0;border-radius:20px">
                             <div class="row">
                                 <div class="col-2">
                                     <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
@@ -437,7 +437,7 @@ function renderModal(id) {
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
 
-                        <div class="px-5 py-3 mb-3" style="border: 5px solid #e6ecf0;border-radius:20px">
+                        <div class="px-5 py-3" style="border: 5px solid #e6ecf0;border-radius:20px">
                             <div class="row">
                                 <div class="col-2">
                                     <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
@@ -495,7 +495,7 @@ function renderModal(id) {
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
 
-                        <div class="px-5 py-3 mb-3" style="border: 5px solid #e6ecf0;border-radius:20px">
+                        <div class="px-5 py-3" style="border: 5px solid #e6ecf0;border-radius:20px">
                             <div class="row">
                                 <div class="col-2">
                                     <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">

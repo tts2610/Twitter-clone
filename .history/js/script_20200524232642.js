@@ -56,7 +56,7 @@ const post = () => {
     let myTweet = {
         id: tweetList.length ? tweetList.length : 0,
         title: "Sean",
-        logo: "https://pbs.twimg.com/profile_images/809011055905017857/_Cyz0_6L_400x400.jpg",
+        logo: "img/profileImages/RenderedImage.HEIC",
         content: { description: "", images: [], videoLink: "" },
         time: new Date().toISOString(),
         retweet: "6",
@@ -148,7 +148,7 @@ function retweet(id) {
     let child = {
         id: tweetList.length ? tweetList.length : 0,
         title: original.title,
-        logo: "https://pbs.twimg.com/profile_images/809011055905017857/_Cyz0_6L_400x400.jpg",
+        logo: "img/profileImages/RenderedImage.HEIC",
         content: { description: $("#tweetArea-modal").text(), images: [] },
         time: new Date().toISOString(),
         retweet: "6",
