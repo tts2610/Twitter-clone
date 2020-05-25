@@ -367,7 +367,7 @@ function renderModal(id) {
             <div class="modal-body">
                 <div class="row">
                     <div class="col-1">
-                        <img src="https://pbs.twimg.com/profile_images/809011055905017857/_Cyz0_6L_400x400.jpg" id="moreToFollowImg" alt="Avatar">
+                        <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
                     </div>
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
@@ -432,7 +432,7 @@ function renderModal(id) {
             <div class="modal-body">
                 <div class="row">
                     <div class="col-1">
-                        <img src="https://pbs.twimg.com/profile_images/809011055905017857/_Cyz0_6L_400x400.jpg" id="moreToFollowImg" alt="Avatar">
+                        <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
                     </div>
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
@@ -490,7 +490,7 @@ function renderModal(id) {
             <div class="modal-body">
                 <div class="row">
                     <div class="col-1">
-                        <img src="https://pbs.twimg.com/profile_images/809011055905017857/_Cyz0_6L_400x400.jpg" id="moreToFollowImg" alt="Avatar">
+                        <img src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/643x481/bwpUoL-J_400x400_ckOpi7f_4RVQqqi_ZPjpFJN_cnPYP1e_202004.jpg" id="moreToFollowImg" alt="Avatar">
                     </div>
                     <div class="col-11">
                         <div contenteditable="true" placeholder="What's happening" id="tweetArea-modal" style="padding-left: 34px;"></div>
@@ -498,7 +498,7 @@ function renderModal(id) {
                         <div class="px-5 py-3 mb-3" style="border: 5px solid #e6ecf0;border-radius:20px">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="${thisElement.logo}" id="moreToFollowImg" alt="Avatar">
+                                    <img src="img/profileImages/talkSport.jpg" id="moreToFollowImg" alt="Avatar">
                                 </div>
                                 <div class="col-10">
                                     <div>
